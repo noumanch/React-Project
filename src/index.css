@@ -1,14 +1,70 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.App{
+  text-align: center!important;
+  font-size: 20px;
+  font-style:oblique;
+
+}
+.logo{
+  width: 100%;
+    height: 30vh;
+    margin-top: 3vh;
+}
+#circle{
+  height: 15vh;
+}
+.homeicon{
+  height: 10vh;
+}
+button{
+  float: right;
+}
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* Tooltip text */
+.tooltip .tooltiptext {
+    height: 60px;
+    width: 100px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    visibility: hidden;
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10vw;
+}
+.div{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
 }

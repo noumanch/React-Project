@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <img className="logo" src='./MYtineraryLogo.png'alt=''/>
         </header>
+        <div className="App">
+        <section>
+         <p>Find your perfect trip, designed by the insiders who know and love their city.</p>
+         </section>
+         <div>
+         <h1>Start browsing</h1>
+         <img id='circle' src='./circled-right-2.png' alt=''/>
+         </div>
+         <div>
+         <p>Want to build your own MYtinerary</p>
+         <p><span>Login CreateAccount</span></p>
+         </div>
+         <img className='homeicon' src='./homeIcon.png' alt=''/>
+        </div>
       </div>
     );
   }

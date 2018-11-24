@@ -1,12 +1,51 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Cities from './cities';
+import Login from './login';
+import Signup from './signup';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const routing = (
+  <Router>
+    <div>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/cities">Cities</Link>
+        </li>
+        <li>
+          <Link to="/login">Login</Link>
+        </li>
+        <li>
+          <Link to="/signup">Sign Up</Link>
+        </li>
+      </ul>
+      <Route exact path="/" component={App} />
+      <Route  path="/cities" component={Cities} />
+      <Route  path="/login" component={Login} />
+      <Route  path="/signup" component={Signup} />
+    </div>
+  </Router>
+)
+ const button = (
+   <button>
+   <div className="div"></div>
+   <div className="div"></div>
+   <div className="div"></div>
+   </button>
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+//   <div className="button tooltip">
+//   <p className="tooltiptext">Login CreateAccount</p>
+//     <button  className="hamburger" type="button">
+//       <span className="hamburger-box">
+//       <span className="hamburger-inner"></span>
+//       </span>
+//     </button>
+//   </div>
+ )
+ReactDOM.render(routing, document.getElementById('root'));
+ReactDOM.render(button, document.getElementById('button'));
